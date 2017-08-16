@@ -51,4 +51,4 @@ class Dialog {
 
 }
 
-export default DialogService = new Dialog();
+export default new Dialog();

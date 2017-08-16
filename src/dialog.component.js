@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { ModalService } from './modal.service';
 
-export default DialogComponent = Vue.component('dialogComponent', {
+export default {
   template: `
 <div>
     <div class="modal__header" v-show="data.title">

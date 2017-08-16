@@ -16,4 +16,4 @@ class Modal {
   cancel()  { error() };
 }
 
-export default ModalService = new Modal();
+export default new Modal();
