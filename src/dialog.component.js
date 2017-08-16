@@ -28,4 +28,4 @@ export default {
       ModalService.cancel();
     }
   }
-});
+};
