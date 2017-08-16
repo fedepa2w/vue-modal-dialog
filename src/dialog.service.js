@@ -33,7 +33,7 @@ class Dialog {
   };
 
   open(type, message, dialogConfig={}, modalConfig={}) {
-    let data = Object.assign({
+    var data = Object.assign({
       title: type[0].toUpperCase() + type.slice(1),
       message,
       submitText: this.submitText,
@@ -51,4 +51,4 @@ class Dialog {
 
 }
 
-export const DialogService = new Dialog();
+export default DialogService = new Dialog();

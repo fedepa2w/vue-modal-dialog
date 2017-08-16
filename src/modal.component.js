@@ -20,8 +20,8 @@ export function ModalComponent(Vue) {
     methods: {
       open(component, config) {
 
-        let defer = new ModalPromise();
-        // let defer = deferObservable();
+        var defer = new ModalPromise();
+        // var  defer = deferObservable();
 
         config = Object.assign({
           backdropClose: true,
@@ -49,7 +49,7 @@ export function ModalComponent(Vue) {
         this.modalIndex++;
         this.modalList.push(modal);
 
-        let index = this.modalList.length - 1;
+        var index = this.modalList.length - 1;
 
         if (!this.active) {
           this.opening = true;
@@ -59,7 +59,7 @@ export function ModalComponent(Vue) {
       },
 
       close(status, data) {
-        let index = this.modalIndex,
+        var  index = this.modalIndex,
             modal = this.modalList[index];
         this.modalIndex--;
 
@@ -94,7 +94,7 @@ export function ModalComponent(Vue) {
       animateModalIn(nextModalIndex) {
         // the timeout gives time for the $refs to propagate
         setTimeout(() => {
-          let el = this.$refs.modals[nextModalIndex];
+          var  el = this.$refs.modals[nextModalIndex];
           el.classList.add('modal--active');
         }, 100);
         // after modal finishes opening
@@ -105,7 +105,7 @@ export function ModalComponent(Vue) {
         }
       },
       animateModalOut(outModalIndex, cb) {
-        let el = this.$refs.modals[outModalIndex];
+        var  el = this.$refs.modals[outModalIndex];
         el.classList.remove('modal--active');
         setTimeout(cb, 300)
       },
@@ -153,7 +153,7 @@ export function ModalComponent(Vue) {
 }
 
 function ModalPromise() {
-  let self = this;
+  var  self = this;
   this.resCb = null;
   this.errCb = null;
   this.catchCb = null;
